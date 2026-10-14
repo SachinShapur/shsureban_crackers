@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SH Sureban Crackers</title>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Mukta:wght@400;600;700&family=Noto+Sans+Kannada:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#15102e;--panel:#211a45;--line:#3a3070;--text:#f4efff;--mute:#b3a9d9;--gold:#ffc233;--pink:#ff3d7f;--green:#3ddc97;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="dark"]){}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.55 'Mukta',system-ui,sans-serif}
+h1,h2,h3{font-family:'Rozha One',Georgia,serif;font-weight:400;margin:0}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(21,16,46,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:12px}
+header b{font-family:'Rozha One',serif;font-weight:400;font-size:1.3rem;color:var(--gold)}
+nav{display:flex;gap:18px;align-items:center}
+nav a{text-decoration:none;color:var(--mute);font-weight:600}
+nav a:hover{color:var(--text)}
+.cartbtn{background:var(--gold);color:#2a1d00;border:0;border-radius:999px;padding:6px 16px;font-weight:700}
+.hero{position:relative;overflow:hidden;text-align:center;padding:90px 20px 80px;background:radial-gradient(ellipse at 50% 120%,#4a1d6b 0,transparent 65%)}
+.hero h1{font-size:clamp(3rem,11vw,7rem);line-height:1;color:var(--gold);letter-spacing:.01em;position:relative;z-index:2}
+.hero h1 span{display:block;color:var(--pink);font-size:.55em;margin-top:.1em}
+.hero h1 .kn{font-family:'Noto Sans Kannada','Mukta',sans-serif;font-size:.45em;font-weight:700;color:var(--text);margin-top:.3em}
+.knh{font-family:'Noto Sans Kannada','Mukta',sans-serif;font-size:.85rem;font-weight:600;color:var(--text);margin-left:10px}
+.hero p{max-width:34em;margin:20px auto 28px;color:var(--mute);position:relative;z-index:2}
+.cta{display:inline-block;background:var(--pink);color:#fff;text-decoration:none;font-weight:700;padding:12px 28px;border-radius:999px;position:relative;z-index:2}
+.burst{position:absolute;left:50%;top:38%;width:0;height:0;z-index:1}
+.burst i{position:absolute;left:0;top:0;width:6px;height:6px;border-radius:50%;background:var(--c);opacity:0;animation:fly 2.4s ease-out 0.4s 2 forwards}
+@keyframes fly{0%{opacity:1;transform:rotate(var(--a)) translateX(0)}70%{opacity:1}100%{opacity:0;transform:rotate(var(--a)) translateX(var(--d)) translateY(40px)}}
+section{max-width:1100px;margin:0 auto;padding:56px 20px}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);color:var(--gold);margin-bottom:6px}
+.sub{color:var(--mute);margin:0 0 24px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;align-items:center}
+.chip{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:6px 16px}
+.chip[aria-pressed=true]{background:var(--gold);color:#2a1d00;border-color:var(--gold);font-weight:700}
+.tools input,.tools select{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit}
+.tools .grow{flex:1;min-width:160px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.card .ic{font-size:2.2rem;line-height:1}
+.card h3{font-size:1.15rem;color:var(--text)}
+.card small{color:var(--mute)}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+.price{font-weight:700;font-size:1.2rem;color:var(--gold)}
+.add{background:transparent;color:var(--green);border:1.5px solid var(--green);border-radius:8px;padding:5px 14px;font-weight:700}
+.add:hover{background:var(--green);color:#06281a}
+.combos{background:linear-gradient(180deg,transparent,#1d1440)}
+.combo{border:2px solid var(--pink);border-radius:18px;padding:22px;background:var(--panel);display:flex;flex-direction:column;gap:8px}
+.combo h3{color:var(--pink);font-size:1.4rem}
+.combo ul{margin:0;padding-left:1.1em;color:var(--mute)}
+.save{color:var(--green);font-weight:700}
+.was{text-decoration:line-through;color:var(--mute);font-size:.95rem;margin-right:6px}
+.empty{color:var(--mute);padding:30px 0}
+footer{border-top:1px solid var(--line);text-align:center;color:var(--mute);padding:30px 20px 40px;font-size:.95rem}
+footer p{margin:4px auto;max-width:40em}
+#drawer{position:fixed;right:0;top:0;bottom:0;width:min(380px,100%);background:var(--panel);border-left:1px solid var(--line);z-index:20;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding:20px;padding-top:calc(20px + env(safe-area-inset-top,0px))}
+#drawer.open{transform:none}
+#items{flex:1;overflow:auto}
+.li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--text)}
+.total{display:flex;justify-content:space-between;font-weight:700;font-size:1.2rem;padding:14px 0}
+.wa{display:block;text-align:center;background:#25d366;color:#04230f;font-weight:700;text-decoration:none;border-radius:10px;padding:12px}
+@media(prefers-reduced-motion:reduce){.burst i{animation:none}html{scroll-behavior:auto}#drawer{transition:none}}
+@media(max-width:600px){nav a.hide{display:none}.knh{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <b>SH Sureban Crackers<span class="knh" lang="kn">ಎಸ್.ಎಚ್. ಸುರೇಬಾನ್ ಕ್ರ್ಯಾಕರ್ಸ್</span></b>
+  <nav><a class="hide" href="#shop">Crackers</a><a class="hide" href="#combos">Combo packs</a><button class="cartbtn" id="open">Cart (<span id="cnt">0</span>)</button></nav>
+</header>
+
+<div class="hero">
+  <div class="burst" id="burst" aria-hidden="true"></div>
+  <h1>SH Sureban Crackers<span class="kn" lang="kn">ಎಸ್.ಎಚ್. ಸುರೇಬಾನ್ ಕ್ರ್ಯಾಕರ್ಸ್</span><span>Light up your celebration</span></h1>
+  <p>Sparklers, flower pots, rockets and sky shots, sorted by type and price. Or pick a ready-made combo pack and save.</p>
+  <a class="cta" href="#shop">Browse crackers</a>
+</div>
+
+<section id="shop">
+  <h2>All crackers</h2>
+  <p class="sub">Filter by category, search by name, or sort by price.</p>
+  <div class="tools">
+    <div id="chips" style="display:contents"></div>
+  </div>
+  <div class="tools">
+    <input class="grow" id="q" type="search" placeholder="Search crackers" aria-label="Search crackers">
+    <select id="sort" aria-label="Sort by">
+      <option value="">Sort: Featured</option>
+      <option value="asc">Price: low to high</option>
+      <option value="desc">Price: high to low</option>
+    </select>
+    <select id="range" aria-label="Price range">
+      <option value="0-9999">Any price</option>
+      <option value="0-100">Under ₹100</option>
+      <option value="100-300">₹100 – ₹300</option>
+      <option value="300-9999">Above ₹300</option>
+    </select>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="combos" class="combos" style="max-width:none">
+  <div style="max-width:1060px;margin:0 auto">
+    <h2>Combo packs</h2>
+    <p class="sub">Ready-made boxes at a lower price than buying each item.</p>
+    <div class="grid" id="combogrid"></div>
+  </div>
+</section>
+
+<footer>
+  <p><b style="color:var(--gold)">SH Sureban Crackers</b> &nbsp;<b lang="kn" style="color:var(--gold);font-family:'Noto Sans Kannada',sans-serif">ಎಸ್.ಎಚ್. ಸುರೇಬಾನ್ ಕ್ರ್ಯಾಕರ್ಸ್</b></p>
+  <p>Prices shown are samples. Please buy and burst crackers only as permitted by local rules, outdoors, with an adult present and water nearby.</p>
+</footer>
+
+<aside id="drawer" aria-label="Cart">
+  <div style="display:flex;justify-content:space-between;align-items:center"><h3 style="color:var(--gold)">Your cart</h3><button class="chip" id="close">Close</button></div>
+  <div id="items"></div>
+  <div class="total"><span>Total</span><span id="total">₹0</span></div>
+  <a class="wa" id="wa" href="#" target="_blank" rel="noopener">Send order on WhatsApp</a>
+</aside>
+
+<script>
+// ===== EDIT HERE =====
+const WHATSAPP = "919902497766"; // shop number with country code, no +
+const PRODUCTS = [
+  // id, name, category, price (₹), pack info, icon
+  ["s1","Electric Sparklers (10 pcs)","Sparklers",60,"Box of 10","✨"],
+  ["s2","Colour Sparklers (10 pcs)","Sparklers",90,"Box of 10","🎇"],
+  ["s3","Long Sparklers (5 pcs)","Sparklers",120,"Box of 5","✨"],
+  ["f1","Flower Pot Small (5 pcs)","Flower Pots",100,"Box of 5","🌸"],
+  ["f2","Flower Pot Big (5 pcs)","Flower Pots",180,"Box of 5","🌺"],
+  ["f3","Flower Pot Deluxe (3 pcs)","Flower Pots",260,"Box of 3","💐"],
+  ["g1","Ground Chakkar (10 pcs)","Ground Chakkars",70,"Box of 10","🌀"],
+  ["g2","Ground Chakkar Special (10 pcs)","Ground Chakkars",130,"Box of 10","🌀"],
+  ["r1","Rocket (5 pcs)","Rockets",110,"Box of 5","🚀"],
+  ["r2","Whistling Rocket (5 pcs)","Rockets",160,"Box of 5","🚀"],
+  ["r3","Colour Rocket (3 pcs)","Rockets",210,"Box of 3","🚀"],
+  ["n1","Colour Fountain (3 pcs)","Fountains",150,"Box of 3","⛲"],
+  ["n2","Crackling Fountain (3 pcs)","Fountains",230,"Box of 3","⛲"],
+  ["k1","7 Shot Sky Shot","Sky Shots",190,"1 piece","🎆"],
+  ["k2","30 Shot Multi-colour","Sky Shots",650,"1 piece","🎆"],
+  ["k3","60 Shot Grand Finale","Sky Shots",1250,"1 piece","🎆"],
+  ["b1","Red Crackers 1000 Wala","Crackers & Bombs",300,"1 roll","💥"],
+  ["b2","Lakshmi Bomb (10 pcs)","Crackers & Bombs",85,"Box of 10","💥"],
+  ["c1","Pop-pop Snaps (50 pcs)","Kids' Picks",40,"Box of 50","🎈"],
+  ["c2","Magic Pencil (10 pcs)","Kids' Picks",50,"Box of 10","✏️"],
+  ["c3","Butterfly Spinner (5 pcs)","Kids' Picks",75,"Box of 5","🦋"]
+].map(([id,name,cat,price,pack,ic])=>({id,name,cat,price,pack,ic}));
+
+const COMBOS = [
+  {id:"p1",name:"Kids Fun Pack",price:249,was:310,items:["Pop-pop Snaps","Magic Pencil","Butterfly Spinner","Electric Sparklers"]},
+  {id:"p2",name:"Family Pack",price:799,was:990,items:["Flower Pot Big","Ground Chakkar Special","Colour Fountain","Rocket","Colour Sparklers"]},
+  {id:"p3",name:"Grand Celebration Pack",price:1999,was:2450,items:["60 Shot Grand Finale","30 Shot Multi-colour","Flower Pot Deluxe","Crackling Fountain","Colour Rocket","Long Sparklers"]}
+];
+// =====================
+
+const CATS=["All",...new Set(PRODUCTS.map(p=>p.cat))];
+let cat="All", cart={};
+const $=s=>document.querySelector(s), inr=n=>"₹"+n.toLocaleString("en-IN");
+const all=[...PRODUCTS,...COMBOS.map(c=>({...c,pack:"Combo"}))];
+
+function renderChips(){
+  $("#chips").innerHTML=CATS.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join("");
+  document.querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{cat=b.dataset.c;renderChips();renderGrid()});
+}
+function renderGrid(){
+  const q=$("#q").value.trim().toLowerCase(), [lo,hi]=$("#range").value.split("-").map(Number), s=$("#sort").value;
+  let list=PRODUCTS.filter(p=>(cat==="All"||p.cat===cat)&&p.name.toLowerCase().includes(q)&&p.price>=lo&&p.price<hi);
+  if(s) list=[...list].sort((a,b)=>s==="asc"?a.price-b.price:b.price-a.price);
+  $("#grid").innerHTML=list.length?list.map(p=>`<article class="card"><div class="ic" aria-hidden="true">${p.ic}</div><h3>${p.name}</h3><small>${p.cat} · ${p.pack}</small><div class="row"><span class="price">${inr(p.price)}</span><button class="add" data-add="${p.id}">Add</button></div></article>`).join(""):`<p class="empty">No crackers match. Clear the search or choose another price range.</p>`;
+  bindAdd();
+}
+function renderCombos(){
+  $("#combogrid").innerHTML=COMBOS.map(c=>`<article class="combo"><h3>${c.name}</h3><ul>${c.items.map(i=>`<li>${i}</li>`).join("")}</ul><div class="save">Save ${inr(c.was-c.price)}</div><div class="row"><span><span class="was">${inr(c.was)}</span><span class="price">${inr(c.price)}</span></span><button class="add" data-add="${c.id}">Add</button></div></article>`).join("");
+  bindAdd();
+}
+function bindAdd(){document.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;renderCart();b.textContent="Added";setTimeout(()=>b.textContent="Add",700)})}
+function renderCart(){
+  const ids=Object.keys(cart).filter(i=>cart[i]>0);
+  let t=0,n=0,msg="Hello SH Sureban Crackers, I would like to order:%0A";
+  $("#items").innerHTML=ids.length?ids.map(i=>{const p=all.find(x=>x.id===i);t+=p.price*cart[i];n+=cart[i];msg+=encodeURIComponent(`${cart[i]} x ${p.name} = ${inr(p.price*cart[i])}\n`);
+    return `<div class="li"><div>${p.name}<br><small style="color:var(--mute)">${inr(p.price)} each</small></div><div class="qty"><button data-m="${i}" aria-label="Remove one">−</button>${cart[i]}<button data-p="${i}" aria-label="Add one">+</button></div></div>`}).join(""):`<p class="empty">Your cart is empty. Add crackers or a combo pack to start.</p>`;
+  $("#total").textContent=inr(t);$("#cnt").textContent=n;
+  $("#wa").href=`https://wa.me/${WHATSAPP}?text=${msg}${encodeURIComponent("Total: "+inr(t))}`;
+  $("#wa").style.display=ids.length?"block":"none";
+  document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{cart[b.dataset.m]--;renderCart()});
+  document.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{cart[b.dataset.p]++;renderCart()});
+}
+$("#open").onclick=()=>$("#drawer").classList.add("open");
+$("#close").onclick=()=>$("#drawer").classList.remove("open");
+["input","change"].forEach(e=>{$("#q").addEventListener(e,renderGrid);$("#sort").addEventListener(e,renderGrid);$("#range").addEventListener(e,renderGrid)});
+
+// hero burst (plays twice on load)
+$("#burst").innerHTML=Array.from({length:36},(_,k)=>`<i style="--a:${k*10}deg;--d:${110+(k%3)*50}px;--c:${["#ffc233","#ff3d7f","#3ddc97","#7cc4ff"][k%4]}"></i>`).join("");
+renderChips();renderGrid();renderCombos();renderCart();
+</script>
+</body>
+</html>
